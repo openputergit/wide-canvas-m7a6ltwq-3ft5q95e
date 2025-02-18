@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiMarkCRM - Digital Marketing Agency CRM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .sidebar-link:hover { background-color: rgba(255, 255, 255, 0.1); }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-[#2C3E50] text-white hidden md:block">
+            <div class="p-4">
+                <h1 class="text-xl font-bold mb-8">DigiMarkCRM</h1>
+                <nav>
+                    <a href="#dashboard" class="sidebar-link flex items-center p-3 rounded mb-2">
+                        <i class="bi bi-grid-1x2-fill mr-3"></i>Dashboard
+                    </a>
+                    <a href="#leads" class="sidebar-link flex items-center p-3 rounded mb-2">
+                        <i class="bi bi-person-lines-fill mr-3"></i>Leads
+                    </a>
+                    <a href="#campaigns" class="sidebar-link flex items-center p-3 rounded mb-2">
+                        <i class="bi bi-megaphone-fill mr-3"></i>Campaigns
+                    </a>
+                    <a href="#analytics" class="sidebar-link flex items-center p-3 rounded mb-2">
+                        <i class="bi bi-graph-up mr-3"></i>Analytics
+                    </a>
+                    <a href="#tasks" class="sidebar-link flex items-center p-3 rounded mb-2">
+                        <i class="bi bi-list-task mr-3"></i>Tasks
+                    </a>
+                    <a href="#settings" class="sidebar-link flex items-center p-3 rounded">
+                        <i class="bi bi-gear-fill mr-3"></i>Settings
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-x-hidden overflow-y-auto custom-scrollbar">
+            <!-- Top Navigation -->
+            <header class="bg-white shadow-sm">
+                <div class="flex items-center justify-between p-4">
+                    <button class="md:hidden text-gray-600">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                    <div class="flex items-center">
+                        <div class="relative">
+                            <input type="search" placeholder="Search..." class="pl-10 pr-4 py-2 border rounded-lg">
+                            <i class="bi bi-search absolute left-3 top-2.5 text-gray-400"></i>
+                        </div>
+                        <div class="ml-4 flex items-center">
+                            <i class="bi bi-bell text-gray-600 text-xl mr-4"></i>
+                            <img src="https://ui-avatars.com/api/?name=Admin+User" alt="Profile" class="w-8 h-8 rounded-full">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="p-6">
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500">Total Leads</p>
+                                <h3 class="text-2xl font-semibold">2,451</h3>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="bi bi-person-fill text-blue-500"></i>
+                            </div>
+                        </div>
+                        <p class="text-green-500 text-sm mt-2"><i class="bi bi-arrow-up"></i> 12.5% increase</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500">Active Campaigns</p>
+                                <h3 class="text-2xl font-semibold">18</h3>
+                            </div>
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i class="bi bi-megaphone text-purple-500"></i>
+                            </div>
+                        </div>
+                        <p class="text-green-500 text-sm mt-2"><i class="bi bi-arrow-up"></i> 5.3% increase</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500">Revenue</p>
+                                <h3 class="text-2xl font-semibold">$84,245</h3>
+                            </div>
+                            <div class="bg-green-100 p-3 rounded-full">
+                                <i class="bi bi-currency-dollar text-green-500"></i>
+                            </div>
+                        </div>
+                        <p class="text-green-500 text-sm mt-2"><i class="bi bi-arrow-up"></i> 8.2% increase</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500">Conversion Rate</p>
+                                <h3 class="text-2xl font-semibold">15.2%</h3>
+                            </div>
+                            <div class="bg-yellow-100 p-3 rounded-full">
+                                <i class="bi bi-graph-up-arrow text-yellow-500"></i>
+                            </div>
+                        </div>
+                        <p class="text-red-500 text-sm mt-2"><i class="bi bi-arrow-down"></i> 2.1% decrease</p>
+                    </div>
+                </div>
+
+                <!-- Recent Leads Table -->
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold">Recent Leads</h2>
+                        <button class="text-blue-500 hover:text-blue-600">View All</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="text-left text-sm text-gray-500 border-b">
+                                    <th class="pb-3">Name</th>
+                                    <th class="pb-3">Email</th>
+                                    <th class="pb-3">Source</th>
+                                    <th class="pb-3">Status</th>
+                                    <th class="pb-3">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-3">John Smith</td>
+                                    <td>john@example.com</td>
+                                    <td>Website</td>
+                                    <td><span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-600">New</span></td>
+                                    <td>
+                                        <button class="text-gray-400 hover:text-gray-600"><i class="bi bi-three-dots"></i></button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3">Sarah Johnson</td>
+                                    <td>sarah@example.com</td>
+                                    <td>Facebook</td>
+                                    <td><span class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-600">In Progress</span></td>
+                                    <td>
+                                        <button class="text-gray-400 hover:text-gray-600"><i class="bi bi-three-dots"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3">Michael Brown</td>
+                                    <td>michael@example.com</td>
+                                    <td>LinkedIn</td>
+                                    <td><span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600">Qualified</span></td>
+                                    <td>
+                                        <button class="text-gray-400 hover:text-gray-600"><i class="bi bi-three-dots"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Campaign Performance -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h2 class="text-lg font-semibold mb-4">Campaign Performance</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm">Email Campaign</span>
+                                    <span class="text-sm text-gray-500">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm">Social Media</span>
+                                    <span class="text-sm text-gray-500">62%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-500 h-2 rounded-full" style="width: 62%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm">PPC</span>
+                                    <span class="text-sm text-gray-500">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h2 class="text-lg font-semibold mb-4">Upcoming Tasks</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-3">
+                                <div>
+                                    <p class="text-sm font-medium">Follow up with potential clients</p>
+                                    <p class="text-xs text-gray-500">Due Today</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-3">
+                                <div>
+                                    <p class="text-sm font-medium">Review campaign metrics</p>
+                                    <p class="text-xs text-gray-500">Due Tomorrow</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-3">
+                                <div>
+                                    <p class="text-sm font-medium">Prepare monthly report</p>
+                                    <p class="text-xs text-gray-500">Due in 3 days</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const sidebar = document.querySelector('aside');
+            sidebar.classList.toggle('hidden');
+        });
+
+        // Task checkbox functionality
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const taskText = this.nextElementSibling.querySelector('p:first-child');
+                if (this.checked) {
+                    taskText.classList.add('line-through', 'text-gray-400');
+                } else {
+                    taskText.classList.remove('line-through', 'text-gray-400');
+                }
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
